@@ -13,8 +13,8 @@ const Timer = () => {
   }, [time, switcher])
 
   return (
-    <div>
-      {time}
+    <div data-testid="timer">
+      <span data-testid="time">{time && time}</span>
       <button onClick={() => setSwitcher(switcher ? false : true)}>
         {switcher ? 'pause' : 'start'}
       </button>
